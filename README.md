@@ -1,7 +1,7 @@
 # End-point description
 ## The endpoint should consist some feature for MD as:
 
-| link refer | function | description |
+| subfolder | function | description |
 |:---|:---:|:---|
 | /dashboard/:id | GET | get all detail_id based on user_id |
 | /history/:detail_id | GET | get all detail measurment rows based on detail_id |
@@ -15,7 +15,7 @@
 
 ## The endpoint should consist some feature for ML as:
 
-| link refer | function | description |
+| subfolder | function | description |
 |:---|:---:|:---|
 |/image/:detail_id|GET|get the image link based on detail_id|
 |/history/data/:detail_id|POST|post the measurement result refering to detail_id|
