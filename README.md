@@ -3,8 +3,8 @@
 
 | subfolder | function | description |
 |:---|:---:|:---|
-| /api/register | POST | Post name, email and password |
-| /api/login | POST | Post email and password |
+| /register | POST | Post name, email and password |
+| /login | POST | Post email and password |
 | /dashboard/:id | GET | get all detail_id based on user_id |
 | /history/:detail_id | GET | get all detail measurment rows based on detail_id |
 | /history/gender/:id | POST | post the gender to database refering to user_id and create the detail_id |
