@@ -30,9 +30,9 @@ router.get("/users", checkToken, getUsersHandler);
 router.get("/user/:id", checkToken, getUserByUserIdHandler);
 
 // Routes for dashboard
-router.get("/dashboard/:id", checkToken, (req, res) => {
-    const id = String(req.params.user_id);
-    dashboard(id, (err, rows) => {
+router.get("/dashboard/:user_id", checkToken, (req, res) => {
+    const user_id = String(req.params.user_id);
+    dashboard(user_id, (err, rows) => {
         if (err) {
             res.status(500).send({ message: err.sqlMessage });
         } else {
@@ -43,8 +43,8 @@ router.get("/dashboard/:id", checkToken, (req, res) => {
 
 // Routes for history
 router.get("/history/:user_id", checkToken, (req, res) => {
-    const detail_id = String(req.params.detail_id);
-    history(detail_id, (err, rows) => {
+    const user_id = String(req.params.user_id);
+    history(user_id, (err, rows) => {
         if (err) {
             res.status(500).send({ message: err.sqlMessage });
         } else {

@@ -125,7 +125,7 @@ const login = (req, res) => {
 };
 
 const dashboard = (user_id, callback) => {
-    const query = "select d.detail_id, d.umur, d.height, m.shoulders_width, m.hip_width, m.results, d. from userDetail d, userMeasurement m where d.detail_id = m.detail_id AND user_id = ? order by tanggal_pengukuran desc LIMIT 1";
+    const query = "select d.detail_id, d.umur, d.height, m.shoulders_width, m.hip_width, m.result from userDetail d, userMeasurement m where d.detail_id = m.detail_id AND d.user_id = ? order by tanggal_pengukuran desc LIMIT 1";
     pool.query(query, [user_id], (err, rows, field) => {
         if (err) {
             callback(err);
@@ -136,7 +136,7 @@ const dashboard = (user_id, callback) => {
 };
 
 const history = (user_id, callback) => {
-    const query = "select d.detail_id, d.umur, d.height, m.shoulders_width, m.hip_width, m.results, d. from userDetail d, userMeasurement m where d.detail_id = m.detail_id AND user_id = ? order by tanggal_pengukuran desc";
+    const query = "select d.detail_id, d.umur, d.height, m.shoulders_width, m.hip_width, m.result from userDetail d, userMeasurement m where d.detail_id = m.detail_id AND d.user_id = ? order by tanggal_pengukuran desc";
     pool.query(query, [user_id], (err, rows, field) => {
         if (err) {
             callback(err);
