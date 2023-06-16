@@ -3,4 +3,4 @@
 
 | subfolder | function | description |
 |:---|:---:|:---|
-|/result_processing|POST|post data to be processed|
+|/processing_image|POST|post data to be processed|
